@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devoir-Maquette-portfolio</title>
+
+    <link rel="stylesheet" href="/maquette.css">
+
+    <script>
+        
+        function VerifierFormulaire() {
+
+            var champ1 = document.getElementById('champ1').value;
+            var champ2 = document.getElementById('champ2').value;
+            var champ3 = document.getElementById('champ3').value;
+            let error = document.querySelector('.error');
+
+            if ( champ1.trim() === "" ) {
+                // alert("Impossible d'envoyer !!! Tout les champs n'ont pas été rempli. ");
+                error.classList.add('visible');
+                champ1.focus();
+                return false
+            }
+            else if ( champ2.trim() === "" ) {
+                // alert("Impossible d'envoyer !!! Tout les champs n'ont pas été rempli. ");
+                error.classList.add('visible');
+                champ2.focus();
+                return false;
+            }
+            else if ( champ3.trim() === ""  ) {
+                // alert("Impossible d'envoyer !!! Tout les champs n'ont pas été rempli. ");
+                error.classList.add('visible');
+                champ3.focus();
+                return false;
+            }
+            else {
+                return true ;
+            }
+
+            document.getElementById("send").addEventListener("submit" , function(e){
+
+                if ( !confirm('Etes vous sur de vouloir envoyer ce formulaire ?') ) {
+                    e.preventDefault();
+                    console.log("recharge annuler");
+                }
+
+            })
+        }
+
+        function menu () {
+
+            let menue = document.querySelector('.menu');
+            let lien = document.querySelector('.liens');
+
+            menue.addEventListener('click' , () => {
+                lien.classList.toggle('list');
+            })
+
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <header>
+
+        <nav>
+            <h1>Verushka</h1>
+
+            <img src="/images/menu.png" alt="menu-hamburger" class="menu" onclick="menu()">
+
+            <ul class="liens">
+                <li><a href="#">Acceuil</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Projet</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="part1">
+
+            <div class="text">
+                <h1>Robbie Lens Photographie</h1>
+                <p>Où <span>professionalisme </span> s'allie avec <span>passion</span>. Depuis plus de 5 ans maintenant, j'exerce mon metier avec la passion qui m'anime: capturer l'essence de chaque instant.</p>
+                <a href="#contact">
+                    <button>UN PROJET ? ECRIVEZ-MOI</button>
+                </a>
+            </div>
+        
+            <div class="img1">
+                <img src="/images/photo.jpg" alt="img">
+            </div>
+
+        </section>
+
+        <section class="part2">
+            <h1>Mon dernier projet</h1>
+        </section>
+
+        <section class="part3">
+            <div class="l1">
+                <div class="bt"><img src="/images/24.4 article-image-1.jpg.jpg" alt=""></div>
+                <div class="bt"><img src="/images/24.5 article-image-2.jpg.jpg" alt=""></div>
+                <div class="bt"><img src="/images/24.6 main.jpg.jpg" alt=""></div>
+            </div>
+            <div class="l2">
+                <div class="bt"><img src="/images/24.5 article-image-2.jpg.jpg" alt=""></div>
+                <div class="bt"><img src="/images/24.6 main.jpg.jpg" alt=""></div>
+                <div class="bt"><img src="/images/24.4 article-image-1.jpg.jpg" alt=""></div>
+            </div>
+        </section>
+
+        <form id="contact" onsubmit="return confirm('Etes vous sur de vouloir envoyer ce formulaire ?')">
+
+            <h1>Parlons de votre projet</h1>
+
+            <div class="champ">
+                <div class="champ1">
+                    <div>
+                        <label for="nom">nom</label>
+                        <input type="text" name="nom" id="champ1">
+                    </div>
+                    <div>
+                        <label for="mail">e-mail</label>
+                        <input type="text" name="mail" id="champ2">
+                    </div>
+                </div>
+                <div class="champ2">
+                    <label for="commentaire"><p class="error">Tous les champs sont obligatoires !</p> message</label>
+                    <textarea name="commentaire" id="champ3"></textarea>
+                </div>
+            </div>
+
+            <button id="send" type="submit" onclick="VerifierFormulaire()" >ENVOYER</button>
+
+        </form>
+
+        <nav class="nav2">
+            <h1>NMAV</h1>
+            <ul>
+                <li><a href="#" id="twitter"><img src="/images/twitter.png" alt="x"></a></li>
+                <li><a href="#" id="insta"><img src="/images/instagram.png" alt="insta"></a></li>
+            </ul>
+        </nav>
+        
+    </main>
+
+    <footer></footer>
+    
+</body>
+</html>
