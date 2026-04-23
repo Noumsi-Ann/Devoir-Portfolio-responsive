@@ -1,0 +1,747 @@
+:root {
+    --c1: #1f2039;
+    --c2: #a3b2f9;
+    --nav: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* max-width: 100%; */
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    background: var(--c1);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* =======================================================================HEADER======================================================================= */
+
+header {
+    height: 100px;
+    width: 100%;
+    align-items: center;
+}
+
+nav {
+    background: var(--nav);
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    align-content: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+ul a:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    top: 11.5vh;
+    left: 50%;
+    position: absolute;
+    margin-right: -150%;
+}
+
+.liens.menu {
+    transition: all 2s ease;
+}
+
+/* =======================================================================@MEDIA SCREEN======================================================================= */
+
+@media screen and (min-width: 0) {
+
+    nav {
+        align-items: center;
+    }
+
+    header nav {
+        padding: 0 20px;
+    }
+
+    nav h1 {
+        font-size: 30px;
+    }
+
+    header nav img {
+        height: 70%;
+        width: 20%;
+    }
+
+    header nav ul {
+        background-color: rgba(255, 255, 255, 0.753);
+        border: 1px solid white;
+        border-radius: 0 0 0 10px;
+        height: 50vh;
+        width: 50%;
+        display: none;
+        flex-direction: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header nav ul li {
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+    
+    ul a {
+        color: black;
+    }
+
+    .part1 {
+        margin: 10vh 0 5vh 0;
+        height: 800px;
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 0px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .img1 {
+        height: 70%;
+        width: 70%;
+        align-content: start;
+    }
+
+    .text {
+        margin: 0;
+        padding: 0;
+        height: 200px;
+        width: 100%;
+        font-size: small;
+        justify-content: space-evenly;
+    }
+
+    .text h1 {
+        text-align: center;
+        font-size: 2rem;
+        color: var(--c2);
+    }
+
+    .text p {
+        font-size: 1.3rem;
+    }
+
+    .text a {
+        margin: 30px auto 30px auto;
+        height: 80%;
+        width: 80%;
+    }
+
+    .text button {
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        font-size: small;
+    }
+
+    .part2 {
+        height: 100px;
+    }
+
+    .part2 h1 {
+        font-weight: normal;
+        font-size: 1.5rem;
+    }
+
+    .part3 {
+        height: 250px;
+        gap: 5px;
+    }
+
+    .bt {
+        height: 100px;
+        width: 32%;
+    }
+
+    form {
+        margin: 0;
+        padding: 0 30px;
+        height: 800px;
+        width: 100%;
+    }
+
+    .champ {
+        width: 100%;
+    }
+
+    label {
+        font-size: 1.2rem;
+    }
+
+    .champ1 {
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .champ1 div {
+        height: 100%;
+        width: 100%;
+    }
+
+    .champ2 {
+        height: 100%;
+        width: 100%;
+    }
+
+    textarea {
+        padding: 20px;
+        height: 100px;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    form button {
+        margin: 40px auto;
+        height: 10%;
+        width: 50%;
+    }
+
+    .nav2 {
+        padding: 0 20px;
+        height: 50px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav2 h1 {
+        font-size: 2rem;
+    }
+
+    .nav2 ul {
+        gap: 20px;
+    }
+
+    footer {
+        height: 150px;
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 410px) {
+    
+    header nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .part1 {
+        height: 800px;
+    }
+
+    .part3 {
+        height: 290px;
+        gap: 7px;
+    }
+
+    .bt {
+        height: 120px;
+        width: 32%;
+    }
+
+}
+
+@media screen and (min-width: 500px) {
+
+    header nav ul {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .part1 {
+        margin: 10vh a0 5vh 0;
+        height: 900px;
+    }
+
+    .img1 {
+        height: 50%;
+        width: 60%;
+        align-content: start;
+    }
+
+    .text {
+        margin: 0;
+        padding: 0;
+        height: 200px;
+        width: 100%;
+        font-size: small;
+        justify-content: space-evenly;
+    }
+
+    .text h1 {
+        text-align: center;
+        font-size: 2rem;
+        color: var(--c2);
+    }
+
+    .text a {
+        margin: 30px auto 30px auto;
+        height: 15%;
+        width: 80%;
+    }
+
+    .text button {
+        padding: 20px;
+        height: 100%;
+        width: 100%;
+        font-size: small;
+    }
+
+    .text h1 {
+        font-size: 2.5rem;
+    }
+
+
+}
+
+@media screen and (min-width: 610px) {
+
+    header nav {
+        padding: 0 30px;
+    }
+
+    header nav img {
+        display: none;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 50px;
+        font-size: 1.5rem;
+    }
+
+    .part3 {
+        padding-bottom: 50px;
+        height: auto;
+        gap: 9px;
+    }
+
+    .bt {
+        height: 200px;
+        width: 32%;
+    }
+
+    form {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    form button {
+        margin: 40px auto;
+        height: 9%;
+        width: 40%;
+    }
+
+    .nav2 {
+        height: 80px;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+
+    .part1 {
+        margin: 10vh auto 5vh auto;        
+        width: 90%;
+        height: 1000px;
+    }
+
+    .text h1 {
+        font-size: 3.2rem;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    form {
+        margin: 0 auto;
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    header nav {
+        padding: 0 70px;
+    }
+
+    header nav h1 {
+        font-size: 2.5rem;
+    }
+
+    .part1 {
+        margin-bottom: 8vh;
+        flex-direction: row;
+        height: 500px;
+        width: 90%;
+    }
+
+    .text {
+        padding: 0 20px;
+        height: 50%;
+        width: 100%;
+        justify-content: start;
+    }
+
+    .text h1 {
+        text-align: left;
+    }
+
+    .img1 {
+        padding: 0;
+        height: 100%;
+        width: 50%;
+    }
+
+    .img1 img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .part1 a {
+        margin-left: 0;
+        width: 60%;
+    }
+
+    .text button {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        font-size: large;
+    }
+
+    .part2 {
+        height: 200px;
+    }
+
+    .bt {
+        height: 250px;
+        width: 33%;
+    }
+
+    form {
+        height: 550px;
+    } 
+
+    .champ1 {
+        height: auto;
+        flex-direction: row;
+    }
+
+    .nav2 {
+        padding: 0 100px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    header nav {
+        padding: 0 100px 0 150px;
+    }
+    
+    header nav ul {
+        gap: 70px;
+        font-size: 1.8rem;
+    }
+
+    .part1 {
+        width: 75%;
+    }
+
+}
+
+@media screen and (min-width: 1500px) {
+
+    header nav {
+        padding: 0 100px 0 200px;
+    }
+
+    header nav ul {
+        gap: 120px;
+    }
+
+    .part1 {
+        width: 65%;
+    }
+
+    .bt {
+        height: 350px;
+        width: 33%;
+    }
+
+}
+
+@media screen and (min-width: 1900px) {
+
+    .part1 {
+        height: 780px;
+        width: 80%;
+    }
+
+    .text {
+        justify-content: space-evenly;
+    }
+
+    .text h1 {
+        font-size: 6rem;
+    }
+
+    .text p {
+        font-size: 2rem;
+    }
+
+    .text a {
+        height: 100%;
+    }
+
+    .text button {
+        font-size: x-large;
+    }
+    
+
+}
+
+@media screen and (min-width: 2500px) {
+
+
+    header nav {
+        padding: 0 300px 0 500px;
+        height: 250px;
+    }
+
+    header nav h1 {
+        font-size: 6rem;
+    }
+
+    header nav ul {
+        font-size: 3rem;
+        gap: 200px;
+    }
+
+    .part1 {
+        margin: 10vh auto 5vh auto;
+        height: 800px;
+        width: 50%;
+    }
+
+    .part2 h1 {
+        font-size: 3rem;
+    }
+
+    .bt {
+        height: 500px;
+    }
+
+    form {
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 3rem;
+        width: 50%;
+    }
+
+    label {
+        font-size: 2rem;
+    }
+
+    .nav2 {
+        padding: 0 300px 0 500px;
+        height: 150px;
+    }
+
+    .nav2 h1 {
+        font-size: 3rem;
+    }
+
+    .nav2 ul {
+        gap: 100px;
+    }
+
+    footer {
+        height: 150px;
+        width: 100%;
+    }
+
+}
+
+
+
+/* =======================================================================MAIN======================================================================= */
+
+.part1 {
+    padding: 3% 1%;
+    display: flex;
+    gap: 0px;
+    justify-content: start;
+}
+
+.text {
+    background-color: transparent;
+    height: 100%;
+    width: 60%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.img1 {
+    align-content: start;
+}
+
+.img1 img {
+    height: 100%;
+    width: 100%;
+}
+
+.text h1 {
+    color: var(--c2);
+}
+
+.text p {
+    width: 80%;
+}
+
+.text span {
+    color: var(--c2);
+} 
+
+.text a {
+    background-color: red;
+    border-radius: 100px;
+}
+
+.text button {
+    background: linear-gradient(180deg , #8f87b7 , #abacea , #abacea , #a7a7e3);
+    border-radius: 100px;
+    color: white;
+    text-align: center;
+}
+
+.part2 {
+    width: 100%;
+    background: white;
+    align-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.part2 h1 {
+    text-align: center;
+}
+
+.part3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+}
+
+.part3 img {
+    height: 100%;
+    width: 100%;
+}
+
+.l1 , .l2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error {
+    color: red;
+    visibility: hidden;
+    text-align: center;
+    font-size: 1rem;
+    height: auto;
+}
+
+.visible {
+    visibility: visible !important;
+}
+
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form h1 {
+    margin: 50px 0;
+    color: var(--c2);
+    height: auto;
+    text-align: center;
+}
+
+.champ1 div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.champ1 input {
+    padding: 0 20px;
+    height: 50px;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.champ2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form button {
+    background: linear-gradient(180deg , #8f87b7 , #abacea , #abacea , #a7a7e3);
+    padding: 0 5%;
+    border-radius: 100px;
+    font-size: large;
+    color: white;
+}
+
+form button:hover {
+    background: #a3b2f9;
+}
+
+.part1 button:hover {
+    background: #a3b2f9;
+}
+
+
+/* =======================================================================FOOTER======================================================================= */
