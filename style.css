@@ -64,6 +64,7 @@ ul a:hover {
     gap: 100px;
     top: 100px;
     left: 50%;
+    height: 100vh;
     position: absolute;
     margin-right: -150%;
 }
